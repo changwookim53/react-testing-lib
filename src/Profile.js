@@ -1,4 +1,3 @@
-'''
 import React from "react";
 const Profile = ({username, name}) => {
     return (
@@ -9,4 +8,3 @@ const Profile = ({username, name}) => {
     )
 };
 export default Profile;
-'''

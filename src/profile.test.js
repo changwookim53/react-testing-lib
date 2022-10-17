@@ -1,17 +1,16 @@
-impoer React from "react";
-import {render} from "@testing-library/react";
+import React from "react";
+import { render } from "@testing-library/react";
 import Profile from "./Profile";
-
 describe("<Profile />", () => {
-    // it("matches snapshot", () => {
-    //     const utils = render(<Profile username="changwookim53" name="김창우" />);
-    //     expect(utils.container).toMatchSnapshot();
-    //     });
-    it("shows the props correctly", ()=> {
+    it("matches snapshot", () => {
         const utils = render(<Profile username="changwookim53" name="김창우" />);
-        utils.getByText("changwookim53")
-        utils.getByText("김창우")
-        utils.getByText("changwookim53 (김창우)");
+        expect(utils.container).toMatchSnapshot();
+    });
+    it("shows the props correctly", () => {
+        const utils = render(<Profile username="changwookim53" name="김창우" />);
+        utils.getByText("changwookim53");
+        utils.getByText("(김창우)");
+        // utils.getByText("changwookim53 (김창우)");
     });
 });
 
